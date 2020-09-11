@@ -1,0 +1,30 @@
+<!DOCTYPE HTML >
+<html>
+ <head>
+  <title> Language selection </title>
+  <style>
+  #demo{
+  color:blue;
+  }
+  #selectlan{
+  background-color:lightgray;
+  }
+  </style>
+ </head>
+ <body>
+ <div id="lanselection" style="text-align:center">
+  <select  id="selectlan" onchange="myFunction()">
+   <option value="-1">--Select Language--</option>
+   <option value="English">English</option>
+   <option value="Hindi">Hindi</option>
+   </select>
+   </div>
+   
+   <p id="demo" style="text-align:center;"></p>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML ="<h4>"+"Form a sentence(Declarative or Interrogative or any other type)from the given words"+"</h4>"+"<br>"+"(select the buttons in proper order)" ;
+}
+</script>
+ </body>
+</html>
