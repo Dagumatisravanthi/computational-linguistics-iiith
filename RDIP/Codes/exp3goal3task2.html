@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>exp3goal2</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+    #msg{
+        text-align:center;
+        color:blue;
+        font-size:20px;
+    }
+    #sentence1,#sentence2{
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    #select1,#select2{
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+</style> 
+</head>
+
+ <body>
+ 
+    <div id="selection" style="text-align:center">
+        <select  id="select" onchange="sentFun()">
+         <option  value="-1">--Select a language--</option>
+         <option  value="English">English</option>
+         <option  value="Hindi">Hindi</option>
+         </select>
+         </div><br><br>
+         <div id="sentance1" style="text-align:center">
+          <select  id="select1" >
+         <option  value="-1">--Select a sentence--</option>
+         <option  value="1">The child like the chocolate</option>
+         <option  value="2">She was stopped by the bravest knight.</option>
+         <option  value="3">Mary baked a cake for his birthday.</option>
+         <option  value="4">She decorated the cake carefully.</option>
+         <option  value="5">Mary wore a dress with polka dots.</option>
+         </select>
+         </div>
+         <div id="sentance2" style="text-align:center">
+          <select  id="select2" >
+         <option  value="-1">--Select a sentence--</option>
+         <option  value="1">राम ने सीता के लिए फल तोड़ा।</option>
+         <option  value="2">छोटे बच्चे पाठशाला जल्दी आयेंगे।</option>
+         <option  value="3">"मेहनत का फल मीठा होता है।</option>
+         <option  value="4">वाह! वह खूबसूरत है।</option>
+         <option  value="5">पेड़ से पत्ते गिर गए।</option>
+         </select>
+         </div><br><br>
+         <p id="msg"><i>select the POS tag for corresponding words</i></p>
+  <script>
+  var text=["The child liked the chocolate.",
+   "She was stopped by the bravest knight.",
+    "Mary baked a cake for his birthday",
+    "She decorated the cake carefully",
+    "Mary wore a dress with polka dots.",
+	"राम ने सीता के लिए फल तोड़ा।",
+    "छोटे बच्चे पाठशाला जल्दी आयेंगे।",
+    "मेहनत का फल मीठा होता है।",
+     "वाह! वह खूबसूरत है।",
+     "पेड़ से पत्ते गिर गए।"]
+
+     function sentFun(){
+  var select=document.getElementById('select');
+  var select1=document.getElementById('select1');
+  var select2=document.getElementById('select2');
+   
+  if(select.value=="English"){
+    if(select1.style.display==='none')
+	{
+    select1.style.display='block'
+	}
+	else{
+    select1.style.display='none'
+  }
+  }
+  else{
+   if(select2.style.display==='none')
+	{
+    select2.style.display='block'
+	}
+	else{
+    select2.style.display='none'
+  }
+  }
+  }
+  //jQuery code
+  
+  $("#select1").hide();
+  $("#select2").hide();
+  $("#msg").hide();
+  $(document).ready(function(){
+    $("select1").change(function(){
+        $("#msg").show();
+        $("select2").change(function(){
+            $("#msg").show();
+        });
+    });
+  });
+   
+  </script>
+ </body>
+</html>
