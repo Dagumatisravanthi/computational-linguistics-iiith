@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>goal4task2</title>
+  <link rel="stylesheet" href="exp2.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script data-main="exp2" src="../Libraries/require.js"></script>
+</head>
+ <body>
+  <div id="lanselection" style="text-align:center">
+  <select  id="select" onchange="corpusFun()">
+   <option  value="-1">--Select a corpus--</option>
+   <option  value="Corpus1">Corpus 1</option>
+   <option  value="Corpus2">Corpus 2</option>
+   <option  value="Corpus3">Corpus 3</option>
+   </select>
+   </div>
+
+  <p id="demo"></p>
+  <!--table of tokens and types-->
+  <div id="div1">
+  <p id="msg">Enter the number of tokens and types for the above corpus:</p>
+
+  <table id="center" style="width:20%">
+   <tr>
+     <td><label for="tokens">#tokens:</label></td>
+	 <td><input type="text" id="ip1" value="" ></td>
+   </tr>
+   <tr>
+     <td><label for="tokens">#types:</label></td>
+	 <td><input type="text"  id="ip2" value=""></td>
+   </tr>
+  </table></div><br>
+  <div id="sub"> <input  type="submit" value="Submit" onclick="tokenType()"></div>
+  <p id="wrong"></p>
+  <p id="right"></p>
+  <p id="newmsg">Now,consider all the tokens with the same 'root' word to be of the same type.Recalculate the number of types.</p>
+  <div id="new">
+  <label for="types">#new types</label>
+  <input type="text" id="ip3" value="" ><br><br>
+  <input  type="submit" value="Submit" onclick="newTypes()">
+  <p id="nwmsg1"></p></p>
+  <p id="nwmsg2"></p></p>
+  </div> 
+ </body>
+</html>
